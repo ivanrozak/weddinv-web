@@ -27,9 +27,20 @@ function OffCanvasComponent() {
         placement='start'
       >
         <Offcanvas.Header closeButton>
-          <img className='mt-3 mx-auto' style={{ height: '40px' }} src={Logo} alt='' />
+          <img
+            className='mt-3 mx-auto'
+            style={{ height: '40px' }}
+            src={Logo}
+            alt=''
+          />
         </Offcanvas.Header>
-        <hr />
+        <hr
+          style={{
+            borderColor: '#F4F4F4',
+            backgroundColor: '#F4F4F4',
+            opacity: 1,
+          }}
+        />
         <Offcanvas.Body className='text-center'>
           <ul className='navbar-nav mx-auto'>
             <li className='nav-item re-navbar position-relative'>
