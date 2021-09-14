@@ -3,7 +3,7 @@ import './index.scss';
 import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import Logo from '../../assets/img/logo.png';
+import Logo from '../../assets/img/LOGOlandscape.png';
 
 function OffCanvasComponent() {
   const [show, setShow] = useState(false);
@@ -24,12 +24,71 @@ function OffCanvasComponent() {
         className='w-100'
         show={show}
         onHide={handleClose}
-        placement='end'
+        placement='start'
       >
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+          <img className='mt-3' style={{ height: '40px' }} src={Logo} alt='' />
         </Offcanvas.Header>
-        <Offcanvas.Body>Some text as placeholder</Offcanvas.Body>
+        <hr />
+        <Offcanvas.Body className='text-center'>
+          <ul className='navbar-nav mx-auto'>
+            <li className='nav-item re-navbar position-relative'>
+              <Link
+                className='nav-link active'
+                style={{ textDecoration: 'none', color: '#243142' }}
+                to='/'
+                onClick={() => handleClose()}
+              >
+                Home
+              </Link>
+              <div className='line-bottom'></div>
+            </li>
+            <li className='nav-item re-navbar position-relative'>
+              <Link
+                className='nav-link active'
+                style={{ textDecoration: 'none', color: '#243142' }}
+                to='/order'
+                onClick={() => handleClose()}
+              >
+                How to order
+              </Link>
+              <div className='line-bottom'></div>
+            </li>
+            <li className='nav-item re-navbar position-relative'>
+              <Link
+                className='nav-link active'
+                style={{ textDecoration: 'none', color: '#243142' }}
+                to='/themes'
+                onClick={() => handleClose()}
+              >
+                Themes
+              </Link>
+              <div className='line-bottom'></div>
+            </li>
+            <li className='nav-item re-navbar position-relative'>
+              <Link
+                className='nav-link active'
+                style={{ textDecoration: 'none', color: '#243142' }}
+                to='/pricing'
+                onClick={() => handleClose()}
+              >
+                Pricing
+              </Link>
+              <div className='line-bottom'></div>
+            </li>
+            <li className='nav-item re-navbar position-relative'>
+              <Link
+                className='nav-link active'
+                style={{ textDecoration: 'none', color: '#243142' }}
+                to='/testimoni'
+                onClick={() => handleClose()}
+              >
+                Testimoni
+              </Link>
+              <div className='line-bottom'></div>
+            </li>
+          </ul>
+        </Offcanvas.Body>
       </Offcanvas>
     </>
   );
@@ -48,13 +107,13 @@ function Navbar() {
             to='#'
           >
             <img
-              style={{ marginRight: '0.75rem', width: '45px' }}
+              style={{ marginRight: '0.75rem', height: '40px' }}
               src={Logo}
               alt=''
             />
-            <div style={{ color: '#ff7468', fontWeight: 'bold' }}>
+            {/* <div style={{ color: '#ff7468', fontWeight: 'bold' }}>
               Koendang.in
-            </div>
+            </div> */}
           </Link>
 
           <OffCanvasComponent />
