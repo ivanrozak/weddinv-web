@@ -27,7 +27,7 @@ function OffCanvasComponent() {
         placement='start'
       >
         <Offcanvas.Header closeButton>
-          <img className='mt-3' style={{ height: '40px' }} src={Logo} alt='' />
+          <img className='mt-3 mx-auto' style={{ height: '40px' }} src={Logo} alt='' />
         </Offcanvas.Header>
         <hr />
         <Offcanvas.Body className='text-center'>
@@ -84,6 +84,17 @@ function OffCanvasComponent() {
                 onClick={() => handleClose()}
               >
                 Testimoni
+              </Link>
+              <div className='line-bottom'></div>
+            </li>
+            <li className='nav-item re-navbar position-relative'>
+              <Link
+                className='nav-link active'
+                style={{ textDecoration: 'none', color: '#243142' }}
+                to='/faq'
+                onClick={() => handleClose()}
+              >
+                FAQ
               </Link>
               <div className='line-bottom'></div>
             </li>
@@ -198,6 +209,22 @@ function Navbar() {
                   to='/testimoni'
                 >
                   Testimoni
+                </Link>
+              </li>
+              <li
+                className={
+                  selected === 6
+                    ? 'nav-item active position-relative'
+                    : 'nav-item position-relative'
+                }
+                onClick={() => setSelected(6)}
+              >
+                <Link
+                  className='nav-link'
+                  style={{ textDecoration: 'none', color: '#243142' }}
+                  to='/faq'
+                >
+                  FAQ
                 </Link>
               </li>
             </ul>
