@@ -1,11 +1,13 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import Order from './pages/Order';
-import Pricing from './pages/Pricing';
-import Testimoni from './pages/Testimoni';
-import Themes from './pages/Themes';
+// import Home from './pages/Home';
+import Home from './pages/Home/index.jsx';
+import Order from './pages/Order/index';
+import Pricing from './pages/Pricing/index';
+import Testimoni from './pages/Testimoni/index';
+import Themes from './pages/Themes/index';
 import Navbars from './components/Navbar';
+// import Footer from './components/Footer';
 import './App.scss';
 export default function App() {
   return (

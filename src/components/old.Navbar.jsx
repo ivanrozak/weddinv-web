@@ -32,7 +32,8 @@ class Navbar extends Component {
           </div>
           <div className='menuCon'>
             <div className='leftMenu'>
-              <LeftMenu />
+              {/* <LeftMenu /> */}
+              <div>Menu disiini nih</div>
             </div>
             {/* <div className='rightMenu'>
             <RightMenu />
@@ -47,7 +48,7 @@ class Navbar extends Component {
             <Drawer
               title='Menu'
               placement='right'
-              closable={false}
+              closable={true}
               onClose={this.onClose}
               visible={this.state.visible}
             >

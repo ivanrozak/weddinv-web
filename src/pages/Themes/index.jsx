@@ -1,9 +1,11 @@
 import React from 'react';
 
-export default function Order() {
+function Themes() {
   return (
     <div>
-      <h1>Halaman Order</h1>
+      <h1>Themes</h1>
     </div>
   );
 }
+
+export default Themes;
